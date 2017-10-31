@@ -1,0 +1,31 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="39.106.37.215" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M211" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="HOST" value="39.106.37.215" />
+    <option name="LOCAL" value="false" />
+    <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+    <deployment>
+      <artifact name="myblog:war exploded">
+        <settings>
+          <option name="CONTEXT_PATH" value="/" />
+        </settings>
+      </artifact>
+    </deployment>
+    <server-settings>
+      <data>
+        <option name="transportHostId" value="87fe6171-8175-4c8c-9327-27d097315ad3" />
+        <host-id>87fe6171-8175-4c8c-9327-27d097315ad3</host-id>
+      </data>
+    </server-settings>
+    <predefined_log_file id="Tomcat" enabled="true" />
+    <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="56413" />
+      <option name="LOCAL" value="false" />
+    </RunnerSettings>
+    <method>
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="myblog:war exploded" />
+      </option>
+    </method>
+  </configuration>
+</component>

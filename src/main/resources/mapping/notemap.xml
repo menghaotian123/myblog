@@ -1,0 +1,22 @@
+<!DOCTYPE mapper PUBLIC "-//www.mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.dao.ArticalDao">
+
+    <resultMap id="NoteMap" type="com.myblog.model.Note">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="ads" jdbcType="VARCHAR" property="ads" />
+        <result column="date" jdbcType="TIMESTAMP" property="date" />
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+    </resultMap>
+    <select id="selectnote" resultType="Note" parameterType="Integer">
+        SELECT * FROM note WHERE id=#{id};
+    </select>
+    <select id="loadArtical" resultMap="NoteMap" parameterType="Integer">
+        SELECT * FROM note WHERE id=#{id};
+    </select>
+    <select id="findArtical" parameterType="Integer" resultType="String">
+        SELECT content FROM note WHERE id=#{id};
+    </select>
+
+
+</mapper>

@@ -1,0 +1,13 @@
+<!DOCTYPE mapper PUBLIC "-//www.mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myblog.dao.AdminChangeArticalDao">
+    <resultMap id="BaseResultMap" type="com.myblog.model.Note">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="ads" jdbcType="VARCHAR" property="ads" />
+        <result column="date" jdbcType="TIMESTAMP" property="date" />
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+    </resultMap>
+    <select id="addArtical" parameterType="com.myblog.model.Note" >
+        INSERT INTO note (title,ads,date,content) VALUES (#{title},#{ads},#{date},#{content})
+    </select>
+</mapper>

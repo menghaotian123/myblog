@@ -1,0 +1,81 @@
+/*主界面*/
+
+
+/*白色部分*/
+
+.index_paper {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 50px;
+	padding-bottom: 100px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background: #FFFFFF;
+}
+
+
+/*body*/
+
+.index_body {
+	background: #D0D0D0;
+	font-size: 20px;
+	font-family: '微软雅黑';
+}
+
+
+/*标题*/
+
+.index_title {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-family: '宋体';
+	border-bottom: 1px solid #D0D0D0;
+}
+
+
+/*功能选择*/
+
+.index_func {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #D0D0D0;
+}
+
+.index_func_btn {
+	font-family: "微软雅黑";
+	position: relative;
+	margin-right: 100px;
+	background: #FFFFFF;
+	border: 0px;
+}
+
+
+/*center样式*/
+
+.index_content {
+	margin-top: 50px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #D0D0D0;
+}
+
+
+/*note-css*/
+
+.note_left{
+	font-size: small;
+	padding-top: 50px;
+	padding-right: 5px;
+	/*border-right: 1px solid #D0D0D0;*/
+	/*border-right-width: thin;*/
+	/*border-right-style: solid;*/
+	/*border-right-color: #D0D0D0;*/
+}
+
+.note_right{
+	padding-top: 50px;
+	padding-right: 5px;
+	/*border-right: 1px solid #D0D0D0;*/
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #D0D0D0;
+}
+
