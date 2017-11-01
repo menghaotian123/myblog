@@ -4,7 +4,7 @@
         <id column="id" jdbcType="INTEGER" property="id" />
         <result column="title" jdbcType="VARCHAR" property="title" />
         <result column="ads" jdbcType="VARCHAR" property="ads" />
-        <result column="date" jdbcType="TIMESTAMP" property="date" />
+        <result column="creatdate" jdbcType="TIMESTAMP" property="creatdate" />
         <result column="content" jdbcType="VARCHAR" property="content"/>
 
     </resultMap>

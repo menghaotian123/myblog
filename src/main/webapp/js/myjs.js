@@ -48,15 +48,22 @@ function loadArtical(articalnum) {
 function loadContentShow() {
 
     $.ajax({
-        contentType: "charset=utf-8",
+        contentType: "application/json;charse=UTF-8",
         type: "post",
+        dataType:"json",
         url: "/Admin/add/result",
-        data: $('#myform').serialize(),
+        data:$('#myform').serialize(),
+        async: false,
+        processData:false,
         success: function (datas) {
+            alert("请求成功");
             $("#contentShow").html(datas);
             return false;
         },
         error: function () {
+            alert(data);
+            alert("再次请求");
+            document.getElementById("myForm").submit();
             alert("请求失败");
         }
     });

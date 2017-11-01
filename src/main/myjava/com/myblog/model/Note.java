@@ -23,7 +23,7 @@ public class Note implements Serializable{
     }
 
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date date;
+    private Date creatdate;
 
     public int getId() {
         return id;
@@ -49,12 +49,12 @@ public class Note implements Serializable{
         this.ads = ads;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreatdate() {
+        return creatdate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreatdate(Date creatdate) {
+        this.creatdate = creatdate;
     }
 
 

@@ -1,22 +1,18 @@
 package com.myblog.controller;
 
 import com.myblog.model.Note;
-import com.myblog.model.SimpleArtical;
 import com.myblog.service.AdminSer;
 import com.myblog.service.HomePagerSer;
 import com.myblog.service.NoteSer;
-import com.myblog.service.serviceImp.AdminImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 /**
  * Created by caosong on 2017/7/22.
@@ -69,16 +65,20 @@ public class BlogMapper {
 ModelAndView Admin(){
     return new ModelAndView("administer");
 }
-@RequestMapping("/myblog-1.0-SNAPSHOT/Admin/add")
+@RequestMapping("/Admin/add")
 ModelAndView AdminAdd(){
     return new ModelAndView("administer_artical_add");
 }
 
-@RequestMapping(value = "/Admin/add/result")
-ModelAndView AdminAddResult(Note note){
+@RequestMapping(value = "/Admin/add/result", method = RequestMethod.POST,consumes = "application/json")
+ModelAndView AdminAddResult(@RequestBody Note note){
     ModelAndView modelAndView = new ModelAndView("result");
     modelAndView.addObject("result","修改成功");
-    note.setDate(new Date());
+   // System.err.println(" title: "+note.getTitle()+" ads: "+note.getAds()+" content: "+note.getContent());
+//    Note note = new Note();
+//    note.setTitle(title);
+//    note.setAds(ads);
+//    note.setContent(content);
     adminSer.addArtical(note);
     return modelAndView;
 }

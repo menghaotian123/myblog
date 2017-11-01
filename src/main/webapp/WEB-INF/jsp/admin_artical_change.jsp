@@ -26,7 +26,7 @@
     <c:forEach items="${result}" varStatus="i" var="item" >
         <tr>
             <td>${item.title}</td>
-            <td>${item.date}</td>
+            <td>${item.creatdate}</td>
             <td>${item.id}</td>
         </tr>
 

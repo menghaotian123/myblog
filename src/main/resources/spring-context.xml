@@ -42,6 +42,7 @@
         <property name="basePackage" value="com.myblog.dao"/>
     </bean>
 
+
     <!--mybatis事务管理-->
     <bean id="transacationManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
